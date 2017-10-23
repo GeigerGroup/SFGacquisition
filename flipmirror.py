@@ -12,8 +12,8 @@ import time
 class FlipMirror:
 
     # Raw byte commands for "MGMSG_MOT_MOVE_JOG".
-    down_position = b"\x6A\x04\x00\x01\x21\x01"
-    up_position = b"\x6A\x04\x00\x02\x21\x01"
+    _down_position = b"\x6A\x04\x00\x01\x21\x01"
+    _up_position = b"\x6A\x04\x00\x02\x21\x01"
     
 
     def __init__(self):
@@ -37,10 +37,10 @@ class FlipMirror:
 
     def setPosUp(self):
         # Send raw bytes to USB driver.
-        self.motor.write(self.up_position)
+        self.motor.write(self._up_position)
     
     def setPosDown(self):
-        self.motor.write(self.down_position)
+        self.motor.write(self._down_position)
         
     def close(self):
         self.motor.close()
