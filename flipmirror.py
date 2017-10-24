@@ -9,7 +9,7 @@ import ftd2xx
 import ftd2xx.defines as constants
 import time
 
-class FlipMirror:
+class FlipMirror():
 
     # Raw byte commands for "MGMSG_MOT_MOVE_JOG".
     _down_position = b"\x6A\x04\x00\x01\x21\x01"
