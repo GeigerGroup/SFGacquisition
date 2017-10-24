@@ -26,23 +26,25 @@ class TOPAS():
         #timeout after 1 second so don't wait forever
         ser.timeout = 1
         
+        ser.open()
+        
         self.ser = ser
         
     def getStatus(self):
-        self.ser.write('GetStatus')
+        self.ser.write(b'GetStatus')
         return self.ser.read()
         
         
     def getWavelength(self):
-        self.ser.write('GetWavelength')
+        self.ser.write(b'GetWavelength')
         return self.ser.read()
     
     def setWavelength(self,wavelength):
         #numbers should set interaction as DFG1
-        self.ser.write('SetWavelengthEx ' + str(wavelength) + '1,6,0,0' )
+        self.ser.write(b'SetWavelengthEx ' + str(wavelength).encode() + b'1,6,0,0' )
     
     def closeShutter(self):
-        self.ser.write('CloseShutter')
+        self.ser.write(b'CloseShutter')
         
     def openShutter(self):
-        self.ser.write('OpenShutter')
+        self.ser.write(b'OpenShutter')
