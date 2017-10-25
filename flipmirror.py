@@ -12,8 +12,8 @@ import time
 class FlipMirror():
 
     # Raw byte commands for "MGMSG_MOT_MOVE_JOG".
-    _down_position = b"\x6A\x04\x00\x01\x21\x01"
-    _up_position = b"\x6A\x04\x00\x02\x21\x01"
+    _up_position = b"\x6A\x04\x00\x01\x21\x01"
+    _down_position = b"\x6A\x04\x00\x02\x21\x01"
     
 
     def __init__(self):

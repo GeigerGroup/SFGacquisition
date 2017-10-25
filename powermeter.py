@@ -19,7 +19,7 @@ class PowerMeter():
         ser = serial.Serial()
         
         #port on computer
-        ser.port = 'COM7'
+        ser.port = 'COM1'
         
         #serial settings
         ser.bytesize = serial.EIGHTBITS
