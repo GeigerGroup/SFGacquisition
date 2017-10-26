@@ -49,7 +49,7 @@ class TOPAS():
     
     def setWavelengthEx(self,wl):
         #numbers should set interaction as DFG1
-        self.ser.write(b'SetWavelengthEx ' + str(wl).encode() + b'1,6,0,0\r' )
+        self.ser.write(b'SetWavelengthEx ' + str(wl).encode() + b', 1,0,0,6\r' )
         return self.ser.readline()
     
     def closeShutter(self):
