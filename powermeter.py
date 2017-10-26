@@ -10,6 +10,9 @@ import serial
 #extracting number
 import re
 
+#timing
+import time
+
 
 class PowerMeter():
 
@@ -36,11 +39,18 @@ class PowerMeter():
         
         self.ser = ser
         
+        
     #get power from meter and return a float
     def getPower(self):
         self.ser.write(b'ch query\r')
+        
+        #wait for 300 ms to give it time to recover
+        time.sleep(0.3)
+        
+        #get response and extract float
         string = self.ser.readline()
         return float(re.findall(r"[-+]?\d*\.\d+|\d+",string.decode())[0])
+    
     
     #close serial port
     def close(self):

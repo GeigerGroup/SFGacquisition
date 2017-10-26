@@ -4,9 +4,11 @@ Spyder Editor
 
 This is a temporary script file.
 """
-
+#import usb drivers
 import ftd2xx
 import ftd2xx.defines as constants
+
+#import time so it waits
 import time
 
 class FlipMirror():
@@ -17,13 +19,12 @@ class FlipMirror():
     
 
     def __init__(self):
-        #serial number for this motor flipper (modify to take as argument)
+        #serial number for this motor flipper
+        #if have more than one modify to take as argument)
         serial = b"37874729"
         
-  
-        # Recommended d2xx setup instructions from Thorlabs.
+        #recommended d2xx setup instructions from Thorlabs
         motor = ftd2xx.openEx(serial)
-        #print(motor.getDeviceInfo())
         motor.setBaudRate(115200)
         motor.setDataCharacteristics(constants.BITS_8, constants.STOP_BITS_1, constants.PARITY_NONE)
         time.sleep(.05)
@@ -33,14 +34,25 @@ class FlipMirror():
         motor.setFlowControl(constants.FLOW_RTS_CTS, 0, 0)
         motor.setRts()
         
+        #set its motor as the motor
         self.motor = motor
 
+
     def setPosUp(self):
-        # Send raw bytes to USB driver.
+        #send raw bites to driver
         self.motor.write(self._up_position)
+        
+        #wait 1.5 seconds to make sure it is up
+        time.sleep(1.5)
+        
     
     def setPosDown(self):
+        #send raw bites to driver
         self.motor.write(self._down_position)
+        
+        #wait 1.5 seconds to make sure it is down
+        time.sleep(1.5)
+        
         
     def close(self):
         self.motor.close()
