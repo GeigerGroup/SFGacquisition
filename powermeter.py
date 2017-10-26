@@ -13,6 +13,9 @@ import re
 #timing
 import time
 
+#array
+import numpy as np
+
 
 class PowerMeter():
 
@@ -41,7 +44,7 @@ class PowerMeter():
         
         
     #get power from meter and return a float
-    def getPower(self):
+    def getSinglePower(self):
         self.ser.write(b'ch query\r')
         
         #wait for 300 ms to give it time to recover
@@ -50,6 +53,18 @@ class PowerMeter():
         #get response and extract float
         string = self.ser.readline()
         return float(re.findall(r"[-+]?\d*\.\d+|\d+",string.decode())[0])
+    
+    def getMultPowers(self,n):
+        #array to hold powers
+        pwrs = np.zeros(n)
+        
+        for i in range(n):
+            pwrs[i] = self.getSinglePower()
+        
+        ave = pwrs.mean()
+        std = pwrs.std()
+        
+        return (ave,std)
     
     
     #close serial port
