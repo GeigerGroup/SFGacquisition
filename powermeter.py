@@ -2,7 +2,9 @@
 """
 Created on Tue Oct 24 15:09:47 2017
 
-@author: Geiger
+Creates object to interact with Molectron EPM 1000 power meter.
+
+@author: pohno
 """
 #serial communications
 import serial

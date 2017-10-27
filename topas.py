@@ -2,7 +2,9 @@
 """
 Created on Sat Oct 21 16:01:41 2017
 
-@author: Geiger
+Creates object to interact with WinTOPAS software through COM port.
+
+@author: pohno
 """
 import serial
 import time

@@ -3,16 +3,20 @@
 """
 Created on Fri Oct 27 10:54:35 2017
 
+Defines the individual parameters of a run: length of an acquisiiton in
+seconds, acqs is a list of each individual acquisiiton, and folder is the 
+folder where the power file and each spectra is stored.
+
 @author: pohno
 """
-
-folder = 'C:\\Users\\Solstice\\Documents\\SFG Data\\Paul\\test'
-
+#folder to store files in
+folder = 'C:/Users/Solstice/My Documents/SFG DATA/Paul/102717/gold3'
 
 #define length (in seconds)
 length = 1
 
-#create empty list
+
+#create empty list (LEAVE AS IS!)
 acqs = []
 
 #create each individual acquisition

@@ -3,13 +3,8 @@
 """
 Created on Fri Oct 20 14:01:22 2017
 
- winspec.py, COM wrapper for use with Roper Scientific's Winspec, modified by
- Paul Ohno from code originally written by Reinier Heeres (qtlab).
-
- This program is free software; you can redistribute it and/or modify
- it under the terms of the GNU General Public License as published by
- the Free Software Foundation; either version 2 of the License, or
- (at your option) any later version.
+winspec.py, COM wrapper for use with Roper Scientific's Winspec, modified by
+Paul Ohno from code originally written by Reinier Heeres (qtlab).
 
 @author: pohno
 """
@@ -49,7 +44,7 @@ class WinSpec():
         return round(self.exp.SGetParam(self.const.EXP_EXPOSURE)[1],2)
     
     #set exposure time for acquisition/focus
-    def setEexposureTime(self,val):
+    def setExposureTime(self,val):
         return self.exp.SetParam(self.const.EXP_EXPOSURE, val)
     
     #get temperature of ccd

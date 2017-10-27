@@ -2,6 +2,8 @@
 """
 Created on Wed Oct 25 17:12:48 2017
 
+Template for file acqs.py.
+
 @author: Solstice
 """
 folder = 'C:\\Users\\Solstice\\Documents\\SFG Data\\Paul\\test'

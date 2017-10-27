@@ -1,8 +1,9 @@
 # -*- coding: utf-8 -*-
 """
-Spyder Editor
+Creates an object to interact with a Thorlabs flip mirror through its usb 
+driver. Modified from code from cmoriarty on github.
 
-This is a temporary script file.
+@author: pohno
 """
 #import usb drivers
 import ftd2xx
