@@ -14,8 +14,14 @@ from topas import TOPAS
 #load flipmirror definition
 from flipmirror import FlipMirror
 
+#load power meter object
+from powermeter import PowerMeter
+
 #load acquisition data type 
 from acquisition import Acquisition
+
+#import time
+import time
 
 #create single winspec object to interact with detector
 winspec = WinSpec()
@@ -26,4 +32,6 @@ topas = TOPAS()
 #create single flipmirror object to interact with the flip mirror
 flipmirror = FlipMirror()
 
+#create single powermeter object to interact with the power meter
+powermeter = PowerMeter()
 

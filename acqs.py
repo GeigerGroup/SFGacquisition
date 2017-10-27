@@ -1,9 +1,11 @@
+#!/usr/bin/env python3
 # -*- coding: utf-8 -*-
 """
-Created on Wed Oct 25 17:12:48 2017
+Created on Fri Oct 27 10:54:35 2017
 
-@author: Solstice
+@author: pohno
 """
+
 folder = 'C:\\Users\\Solstice\\Documents\\SFG Data\\Paul\\test'
 
 
