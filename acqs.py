@@ -10,10 +10,10 @@ folder where the power file and each spectra is stored.
 @author: pohno
 """
 #folder to store files in
-folder = 'C:/Users/Solstice/My Documents/SFG DATA/Paul/102717/gold3'
+folder = 'C:/Users/Solstice/My Documents/SFG DATA/Merve/10312017/lowsalt/run1'
 
 #define length (in seconds)
-length = 1
+length = 120
 
 
 #create empty list (LEAVE AS IS!)

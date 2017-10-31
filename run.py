@@ -15,9 +15,9 @@ define the individual run.
 def startRun():
     
     #create a file to store powers
-    powerPath = folder + '/powers.txt'
-    powerFile = open(powerPath,'w')
-    powerFile.write('dfg\tpower\tstd\n')
+#    powerPath = folder + '/powers.txt'
+#    powerFile = open(powerPath,'w')
+#    powerFile.write('dfg\tpower\tstd\n')
     
     #set the length of each acquisition
     winspec.setExposureTime(length)
@@ -51,13 +51,13 @@ def startRun():
         winspec.saveAcquisition(folder + '/' + acq.name)
         
         #if its not a bg, record power and write to file
-        if not acq.bg:
-            flip.setPosUp()
-            (ave, std) = pm.getMultPowers(10)
-            powerFile.write(str(acq.dfg) + '\t' + str(ave) + '\t' + str(std) + '\n')
-            flip.setPosDown()
+#        if not acq.bg:
+#            flip.setPosUp()
+#            (ave, std) = pm.getMultPowers(10)
+#            powerFile.write(str(acq.dfg) + '\t' + str(ave) + '\t' + str(std) + '\n')
+#            flip.setPosDown()
         
-    powerFile.close()
+#    powerFile.close()
     print('Acquisitions complete.')
     
 #check to see if folder exists and send warning if it does

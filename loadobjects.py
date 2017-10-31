@@ -15,7 +15,7 @@ from winspec import WinSpec
 from topas import TOPAS
 
 #load flipmirror definition
-from flipmirror import FlipMirror
+#from flipmirror import FlipMirror
 
 #load power meter object
 from powermeter import PowerMeter
@@ -36,7 +36,7 @@ winspec = WinSpec()
 topas = TOPAS()
 
 #create single flipmirror object to interact with the flip mirror
-flip = FlipMirror()
+#flip = FlipMirror()
 
 #create single powermeter object to interact with the power meter
 pm = PowerMeter()
