@@ -53,9 +53,11 @@ def startRun():
         #if its not a bg, record power and write to file
         if not acq.bg:
             flip.setPosUp()
-            (ave, std) = pm.getMultPowers(10)
+            time.sleep(0.2)
+            (ave, std) = pm.getMultPowers(3)
             powerFile.write(str(acq.dfg) + '\t' + str(ave) + '\t' + str(std) + '\n')
             flip.setPosDown()
+
         
 #    powerFile.close()
     print('Acquisitions complete.')

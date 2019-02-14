@@ -22,7 +22,7 @@ class FlipMirror():
     def __init__(self):
         #serial number for this motor flipper
         #if have more than one modify to take as argument)
-        serial = b"37874729"
+        serial = b"37000036"
         
         #recommended d2xx setup instructions from Thorlabs
         motor = ftd2xx.openEx(serial)

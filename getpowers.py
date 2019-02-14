@@ -6,10 +6,10 @@ Created on Tue Oct 31 09:31:04 2017
 @author: pohno
 """
 
-powerDFGs = [3600,3500,3400,3300,3200,3100,3000,2900,2800]
+powerDFGs = [3600,3500,3400,3300,3200,3100,3000,2900,2800,2700,2600]
 
 #create a file to store powers
-powerPath = folder + '/powers.txt'
+powerPath = folder + '/powers1433PM.txt'
 powerFile = open(powerPath,'w')
 powerFile.write('dfg\tpower\tstd\n')
 

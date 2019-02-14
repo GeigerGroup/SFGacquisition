@@ -10,10 +10,11 @@ folder where the power file and each spectra is stored.
 @author: pohno
 """
 #folder to store files in
-folder = 'C:/Users/Solstice/My Documents/SFG DATA/Merve/10312017/lowsalt/run1'
+folder = 'C:/Users/Solstice/My Documents/SFG DATA/Merve/02222018/low salt_ flow/run5 flow'
 
 #define length (in seconds)
-length = 120
+length =120
+
 
 
 #create empty list (LEAVE AS IS!)
@@ -27,11 +28,12 @@ acqs.append(Acquisition('3400',3400,645,False))
 acqs.append(Acquisition('3400_bg',3400,645,True))
 acqs.append(Acquisition('3300',3300,645,False))
 acqs.append(Acquisition('3200',3200,645,False))
-acqs.append(Acquisition('3100',3100,640,False))
-acqs.append(Acquisition('3100_bg',3100,640,True))
+acqs.append(Acquisition('3100',3100,635,False))
+acqs.append(Acquisition('3100_bg',3100,635,True))
 acqs.append(Acquisition('3000',3000,635,False))
-acqs.append(Acquisition('3000_bg',3000,635,True))
-acqs.append(Acquisition('2900',2900,630,False))
-acqs.append(Acquisition('2900_bg',2900,630,True))
+acqs.append(Acquisition('2900',2900,625,False))
+acqs.append(Acquisition('2900_bg',2900,625,True))
 acqs.append(Acquisition('2800',2800,625,False))
-acqs.append(Acquisition('2800_bg',2800,625,True))
+acqs.append(Acquisition('2700',2700,615,False))
+acqs.append(Acquisition('2700_bg',2700,615,True))
+acqs.append(Acquisition('2600',2600,615,False))

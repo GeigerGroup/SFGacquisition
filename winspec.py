@@ -59,7 +59,13 @@ class WinSpec():
     def stopAcquisition(self):
         return self.exp.Stop()
     
+    # Close all windows
+#    def close(self):
+#        doc = self.exp.GetDocument()
+#        return self.exp.DocFile.Close()
+    
     #save most recent acquisition
     def saveAcquisition(self,fullname):
         doc = self.exp.GetDocument()
         doc.SaveAs(fullname)
+        #doc.Close()
