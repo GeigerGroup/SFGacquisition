@@ -9,17 +9,10 @@ import os
 import datetime
 
 
-
-
-
 samplename = 'bcaryO3flow_highRH'
 measurementname = 'afterozone_20min_30s'
 numruns = 2
 rootfolder = "C:/Users/Solstice/My Documents/SFG DATA/Ariana/"
-
-
-
-
 
 
 # Create Folders

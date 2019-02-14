@@ -19,8 +19,7 @@ def startRun():
     powerFile = open(powerPath,'w')
     powerFile.write('dfg\tpower\tstd\n')
     
-    #set the length of each acquisitionf
-    winspec.setExposureTime(length)
+
     
     #iterate through each acq in acqs
     for acq in acqs:
@@ -30,6 +29,9 @@ def startRun():
         
         #set detector wavelength
         winspec.setWavelength(acq.detector)
+        
+        #set the length of each acquisition
+        winspec.setExposureTime(acq.length)
         
         #shutter open or closed depending on background
         if acq.bg:
@@ -42,10 +44,11 @@ def startRun():
         winspec.startAcquisition()
         print("Starting acq '" + acq.name + 
               "' with TOPAS @ " + str(acq.dfg) +
-              " nm and detector @ " + str(acq.detector) + " nm.")
+              " nm and detector @ " + str(acq.detector) + " nm " + 
+              "for " + str(acq.length) + " seconds.")
         
         #wait until acquisition is done (with some buffer)
-        time.sleep(length+0.5)
+        time.sleep(acq.length+0.5)
         
         #save acquisition
         winspec.saveAcquisition(folder + '/' + acq.name)

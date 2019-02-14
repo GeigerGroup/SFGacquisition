@@ -11,9 +11,10 @@ with specific TOPAS/detector settings as well as if it is a background or not.
 
 class Acquisition():
     
-    def __init__(self,name,dfg,detector,bg):
+    def __init__(self,name,dfg,detector,bg,length):
         self.name = name
         self.dfg = dfg
         self.detector = detector
         self.bg = bg
+        self.length = length
         
