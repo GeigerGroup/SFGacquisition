@@ -9,10 +9,10 @@ import os
 import datetime
 
 
-samplename = 'bcaryO3flow_highRH'
-measurementname = 'afterozone_20min_30s'
-numruns = 2
-rootfolder = "C:/Users/Solstice/My Documents/SFG DATA/Ariana/"
+samplename = 'au'
+measurementname = 'topas'
+numruns = 1
+rootfolder = "C:/Users/Solstice/My Documents/SFG DATA/Paul/"
 
 
 # Create Folders
@@ -32,7 +32,7 @@ measurementfolder = os.path.join(samplefolder, str(numfolders) + '_' + measureme
 if not os.path.exists(measurementfolder):
     os.makedirs(measurementfolder)
 
-exec(open("C:/Users/Solstice/Documents/Python Scripts/SFGacquisition/acqs_CH_113018.py").read())
+exec(open("C:/Users/Solstice/Documents/Python Scripts/SFGacquisition/acqs_ND_CHOH_050819.py").read())
 
 for i in range(numruns):
     runfolder = 'run' + str(i+1)

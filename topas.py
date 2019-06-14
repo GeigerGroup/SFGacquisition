@@ -7,11 +7,9 @@ Created on Wed Jun 12 15:31:21 2019
 
 #add .NET library
 import clr
-clr.AddReference(r"C:\Users\Spectra Physics\Documents\Topas4PublicAPI-master\NET_SDK\Topas4Lib")
+clr.AddReference(r"C:\Users\Solstice\Documents\Topas4PublicAPI-master\NET_SDK\Topas4Lib")
 
 import time
-import sys
-import Mint
 
 from Topas4Lib import TopasDevice
 
